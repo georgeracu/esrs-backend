@@ -1,5 +1,7 @@
+#Default ignored files
+.idea/
+
 # Byte-compiled / optimized / DLL files
-# .idea/ # Removed for now - not sure if we need it?
 __pycache__/
 *.py[cod]
 *$py.class
