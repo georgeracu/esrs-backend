@@ -4,7 +4,7 @@ https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
 
 ## Table of Contents
 
-- [esrs-backend](#esrs-backend)
+- [Python Flask](#python-flask)
   - [Table of Contents](#table-of-contents)
   - [Development machine](#development-machine)
     - [Mac version](#mac-version)
@@ -14,6 +14,7 @@ https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
       - [Install dependencies](#install-dependencies)
       - [Known issues](#known-issues)
     - [Useful commands](#useful-commands)
+  - [Resources](#resources)
 
 ## Development machine
 
@@ -53,11 +54,11 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 
 #### Install Python3
 
-- Python can be installed and downloaded from [this link](https://www.python.org/downloads/)
+- Python can be downloaded and installed from [this link](https://www.python.org/downloads/)
 
 #### Install dependencies
 
-- In `esrs-backend/scripts`, run `windows-venv_init.bat`.
+- In `esrs-backend/scripts`, run `windows-venv_init.bat`
 - This should:
   - Install `virtualenv` through `pip`
   - Activate the virtual environment
@@ -76,3 +77,8 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 
 - Freeze dependencies and create requirements.txt: `pip3 freeze >requirements.txt`;
 - Install dependencies from requirements.txt: `pip install -r requirements.txt`;
+
+## Resources
+
+- [Learning Flask](https://pythonise.com/series/learning-flask/your-first-flask-app)
+- [Flask mega-tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
