@@ -54,11 +54,11 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 
 #### Install Python3
 
-- Python can be installed and downloaded from [this link](https://www.python.org/downloads/)
+- Python can be downloaded and installed from [this link](https://www.python.org/downloads/)
 
 #### Install dependencies
 
-- In `esrs-backend/scripts`, run `windows-venv_init.bat`.
+- In `esrs-backend/scripts`, run `windows-venv_init.bat`
 - This should:
   - Install `virtualenv` through `pip`
   - Activate the virtual environment
