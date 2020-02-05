@@ -1,7 +1,7 @@
 @ECHO Go up to root
 cd ..
 
-ECHO@ Install the prereqs
+@ECHO Install the prereqs
 pip install virtualenv
 virtualenv venv
 

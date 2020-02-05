@@ -1,17 +1,25 @@
 # esrs-backend
+
 Python
 
-### Table of Contents
+## Table of Contents
 
-- [Setup a development machine](#development-machine)
+- [esrs-backend](#esrs-backend)
+  - [Table of Contents](#table-of-contents)
+  - [Development machine](#development-machine)
     - [Mac version](#mac-version)
+      - [Install Python3 and dependencies](#install-python3-and-dependencies)
+    - [Windows version](#windows-version)
+      - [Install Python3](#install-python3)
+      - [Install dependencies](#install-dependencies)
+      - [Known issues](#known-issues)
     - [Useful commands](#useful-commands)
 
-## Development Machine
+## Development machine
 
 Windows and Apple devices have different configuration. For an Apple device, Python 3 is known as `python3`, therefore pip is also known as `pip3`.
 
-### Mac Version
+### Mac version
 
 To install Python 3 and its dependencies, we will use Homebrew. You can install Homebrew from [here](https://brew.sh/).
 
@@ -39,7 +47,32 @@ Et voila, you have a working Flask application.
 
 Once finished with the virtual environment, you need to deactivate it: `deactivate`.
 
+### Windows version
+
+This has been tested on `python 3.8.0`. If you have problems installing, check you are on this version.
+
+#### Install Python3
+
+- Python can be installed and downloaded from [this link](https://www.python.org/downloads/)
+
+#### Install dependencies
+
+- In `esrs-backend/scripts`, run `windows-venv_init.bat`.
+- This should:
+  - Install `virtualenv` through `pip`
+  - Activate the virtual environment
+  - Install dependencies from `requirements.txt`
+  - Set the entrypoint
+- Run `flask run` to start the server on localhost
+
+#### Known issues
+
+- If you get `'virtualenv' is not recognized as an internal or external command...`:
+  - Make sure your python `%PATH%` is set
+  - Run `pip install --upgrade --force virtualenv` in cmd
+  - Run the script again
+
 ### Useful commands
 
-* Freeze dependencies and create requirements.txt: `pip3 freeze >requirements.txt`;
-* Install dependencies from requirements.txt: `pip install -r requirements.txt`;
+- Freeze dependencies and create requirements.txt: `pip3 freeze >requirements.txt`;
+- Install dependencies from requirements.txt: `pip install -r requirements.txt`;
