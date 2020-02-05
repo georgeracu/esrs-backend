@@ -1,6 +1,6 @@
-# esrs-backend
+# Python Flask
 
-Python
+https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
 
 ## Table of Contents
 
