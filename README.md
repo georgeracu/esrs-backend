@@ -9,10 +9,10 @@ https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
   - [Development machine](#development-machine)
     - [Mac version](#mac-version)
       - [Install Python3 and dependencies](#install-python3-and-dependencies)
+    - [Install Docker](#install-docker)
     - [Windows version](#windows-version)
       - [Install Python3](#install-python3)
       - [Install dependencies](#install-dependencies)
-      - [Known issues](#known-issues)
     - [Useful commands](#useful-commands)
   - [Resources](#resources)
 
@@ -62,20 +62,11 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 
 #### Install dependencies
 
-- In `esrs-backend/scripts`, run `windows-venv_init.bat`
-- This should:
-  - Install `virtualenv` through `pip`
-  - Activate the virtual environment
-  - Install dependencies from `requirements.txt`
-  - Set the entrypoint
-- Run `flask run` to start the server on localhost
-
-#### Known issues
-
-- If you get `'virtualenv' is not recognized as an internal or external command...`:
-  - Make sure your python `%PATH%` is set
-  - Run `pip install --upgrade --force virtualenv` in cmd
-  - Run the script again
+- Download docker from [here](https://docs.docker.com/install/)
+  - Leave UNIX file system on if asked.
+- In `./scripts`, run `win_docker.bat`
+- This should install the docker image and start the server.
+  - If it fails, try removing the -d flag from the second command to run the server in the foreground.
 
 ### Useful commands
 
