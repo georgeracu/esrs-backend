@@ -48,6 +48,10 @@ Et voila, you have a working Flask application.
 
 Once finished with the virtual environment, you need to deactivate it: `deactivate`.
 
+### Install Docker
+
+Follow the installation steps described on the [official website](https://docs.docker.com/install/). Minimum version for Docker for Mac is `Docker version 19.03.5, build 633a0ea`.
+
 ### Windows version
 
 This has been tested on `python 3.8.0`. If you have problems installing, check you are on this version.
@@ -77,6 +81,9 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 
 - Freeze dependencies and create requirements.txt: `pip3 freeze >requirements.txt`;
 - Install dependencies from requirements.txt: `pip install -r requirements.txt`;
+- Build a Docker image locally (you need to be in the root directory of the project): `docker build -t backend:latest .`.
+- List all local Docker images: `docker images`. This should list your newly created image.
+- Run locally your new image: `docker run --name backend -d -p 8000:5000 --rm backend:latest`. Now you can access the app at `http://localhost:8000/`.
 
 ## Resources
 
