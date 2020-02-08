@@ -41,7 +41,7 @@ While in the virtual environment, you need to install Flask: `pip3 install flask
 
 Install dependencies from `dev-requirements.txt`: `pip3 install -r requirements/dev-requirements.txt`.
 
-Install all git hooks locally by running `python -m python_githooks`.
+Install all git hooks locally by running `python3 -m python_githooks`.
 
 Tell Flask where is the entry point: `export FLASK_APP=app.py`.
 
