@@ -9,9 +9,7 @@ virtualenv venv
 call venv/Scripts/activate
 
 @ECHO Install dependencies in the venv
-pip install -r ./requirements/common-requirements.txt
 pip install -r ./requirements/dev-requirements.txt
-pip install -r ./requirements/test-requirements.txt
 set FLASK_APP=app.py
 
 @ECHO Done! You can now start the server with `flask run`
