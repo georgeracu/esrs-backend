@@ -11,3 +11,7 @@ exclude =
     build,
     dist
 max-complexity = 10
+count = True
+show_source = True
+statistics = True
+max-line-length = 120
