@@ -12,7 +12,9 @@ def hello_world():
 @app.route('/EUS')
 def departures():
     return jsonify(
-        train='LATE!'
+        station='London Euston',
+        std='16:07',
+        etd='16:30'
     )
 
 

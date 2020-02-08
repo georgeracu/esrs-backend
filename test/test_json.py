@@ -7,7 +7,13 @@ class MyTestCase(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get('/EUS', content_type='application/json')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, b'{"train":"LATE!"}\n')
+        self.assertEqual(
+            response.data,
+            b'{"etd":"16:30",'
+            b'"station":"London Euston",'
+            b'"std":"16:07"}'
+            b'\n'
+        )
 
 
 if __name__ == '__main__':
