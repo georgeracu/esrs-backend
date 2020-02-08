@@ -14,6 +14,7 @@ https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
       - [Install Python3](#install-python3)
       - [Install dependencies](#install-dependencies)
     - [Useful commands](#useful-commands)
+    - [Other tools](#other-tools)
   - [Resources](#resources)
 
 ## Development machine
@@ -75,6 +76,10 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 - Build a Docker image locally (you need to be in the root directory of the project): `docker build -t backend:latest .`.
 - List all local Docker images: `docker images`. This should list your newly created image.
 - Run locally your new image: `docker run --name backend -d -p 8000:5000 --rm backend:latest`. Now you can access the app at `http://localhost:8000/`.
+
+### Other tools
+
+- For linting and style guide enforcement we use [flake8](https://flake8.pycqa.org/en/latest/index.html). You can run it with `flake8 app`. Configuration file is `.flake8`.
 
 ## Resources
 
