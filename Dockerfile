@@ -4,12 +4,13 @@ RUN adduser -D nonroot
 
 WORKDIR /home/nonroot
 
-COPY requirements.txt requirements.txt
+COPY requirements/common-requirements.txt common-requirements.txt
+COPY requirements/prod-requirements.txt prod-requirements.txt
 RUN python -m venv venv
-RUN venv/bin/pip install -r requirements.txt
+RUN venv/bin/pip install -r prod-requirements.txt
 RUN venv/bin/pip install gunicorn
 
-COPY app.py app.py
+COPY app/ app/
 COPY start.sh ./
 RUN chmod +x start.sh
 

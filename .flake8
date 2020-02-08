@@ -1,0 +1,20 @@
+[flake8]
+
+ignore = 
+    # D203: 1 blank line required before class docstring
+    D203,
+    # W391 blank line at end of file
+    W391
+
+exclude =
+    .git,
+    __pycache__,
+    docs/source/conf.py,
+    old,
+    build,
+    dist
+max-complexity = 10
+count = True
+show_source = True
+statistics = True
+max-line-length = 120

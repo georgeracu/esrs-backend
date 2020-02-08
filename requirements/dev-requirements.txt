@@ -1,0 +1,3 @@
+-r test-requirements.txt
+
+python-githooks==1.0.6
