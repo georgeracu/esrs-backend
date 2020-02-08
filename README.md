@@ -38,7 +38,7 @@ After installing the virtualenv, then you need to activate it: `source venv/bin/
 
 While in the virtual environment, you need to install Flask: `pip3 install flask==1.1.1`.
 
-Install dependencies from `requirements.txt`: `pip3 install -r requirements.txt`
+Install dependencies from `dev-requirements.txt`: `pip3 install -r requirements/dev-requirements.txt`.
 
 Tell Flask where is the entry point: `export FLASK_APP=app.py`.
 
