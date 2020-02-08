@@ -23,6 +23,9 @@ jobs:
     - name: Lint with flake8
       run: |
         flake8 app
-    - name: Test with unittest
+    - name: Test with coverage
       run: |
-        python -m unittest
+        cover run -m unittest
+    - name: Test coverage report
+      run: |
+        cover report

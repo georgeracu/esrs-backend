@@ -83,6 +83,7 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 
 - For linting and style guide enforcement we use [flake8](https://flake8.pycqa.org/en/latest/index.html). You can run it with `flake8 app`. Configuration file is `.flake8`.
 - For git hooks, we use [python-githooks](https://github.com/ygpedroso/python-githooks). It has hooks defined in `.githooks.ini`. After updating a hook , you need to run `python -m python_githooks` in order to add new hooks.
+- For code coverage we use [Coverage](https://coverage.readthedocs.io). It works based on `.coveragerc` config file.
 
 ## Resources
 
