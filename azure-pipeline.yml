@@ -1,0 +1,42 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: Python Flask app
+
+trigger:
+- push
+
+jobs:
+- job: 'Test'
+  pool:
+    vmImage: 'ubuntu-16.04'
+  strategy:
+    matrix:
+      Python37:
+        python.version: '3.7'
+  steps:
+  - task: UsePythonVersion@0
+    displayName: 'Use Python $(python.version)'
+    inputs:
+      versionSpec: '$(python.version)'
+  - script: |
+      python -m venv antenv
+      source antenv/bin/activate
+      python -m pip install --upgrade pip
+      pip install -r requirements/test-requirements.txt
+    workingDirectory: $(projectRoot)
+    displayName: "Install requirements"
+  - script: |
+      flake8 app
+    workingDirectory: $(projectRoot)
+    displayName: "Run linter"
+  - script: |
+      coverage run -m unittest
+    workingDirectory: $(projectRoot)
+    displayName: "Tests with coverage"
+  - script: |
+      coverage report
+    workingDirectory: $(projectRoot)
+    displayName: "Coverage report"
