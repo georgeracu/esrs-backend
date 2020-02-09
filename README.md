@@ -1,6 +1,6 @@
 # Python Flask
 
-https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
+![Test Python app](https://github.com/georgeracu/esrs-backend/workflows/Test%20Python%20app/badge.svg)
 
 ## Table of Contents
 
@@ -65,11 +65,9 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 - Download docker from [here](https://docs.docker.com/install/)
   - Leave UNIX file system on if asked.
 
-To work on the project locally, execute to `scripts/win-dev.bat`
+To work on the project locally, run `scripts/win-dev.bat`
 
-Create a file called .env and add  `TRAINLINE_API_KEY=the_key`
-
-Set the departureboard.io API key 
+Create a file called .env and add  `TRAINLINE_API_KEY=the_key` (this will be loaded as an environment variable for now)
 
 Run the server with `flask run`
 
