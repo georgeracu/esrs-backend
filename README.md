@@ -11,8 +11,7 @@ https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
       - [Install Python3 and dependencies](#install-python3-and-dependencies)
     - [Install Docker](#install-docker)
     - [Windows version](#windows-version)
-      - [Install Python3](#install-python3)
-      - [Install dependencies](#install-dependencies)
+      - [(WIN) Install Python3 and dependencies](#win-install-python3-and-dependencies)
     - [Useful commands](#useful-commands)
     - [Other tools](#other-tools)
     - [Testing](#testing)
@@ -60,17 +59,19 @@ Follow the installation steps described on the [official website](https://docs.d
 
 This has been tested on `python 3.8.0`. If you have problems installing, check you are on this version.
 
-#### Install Python3
+#### (WIN) Install Python3 and dependencies
 
 - Python can be downloaded and installed from [this link](https://www.python.org/downloads/)
-
-#### Install dependencies
-
 - Download docker from [here](https://docs.docker.com/install/)
   - Leave UNIX file system on if asked.
-- In `./scripts`, run `win_docker.bat`
-- This should install the docker image and start the server.
-  - If it fails, try removing the -d flag from the second command to run the server in the foreground.
+
+To work on the project locally, execute to `scripts/win-dev.bat`
+
+Create a file called .env and add  `TRAINLINE_API_KEY=the_key`
+
+Set the departureboard.io API key 
+
+Run the server with `flask run`
 
 ### Useful commands
 
