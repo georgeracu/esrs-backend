@@ -26,6 +26,3 @@ exclude_lines =
 skip_covered = True
 # Skip files that are empy
 skip_empty = True
-
-[html]
-directory = coverage_html_report
