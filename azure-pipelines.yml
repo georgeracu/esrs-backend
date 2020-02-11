@@ -11,7 +11,14 @@
 name: Python Flask app
 
 trigger:
-- push
+  branches:
+    include:
+    - 'master'
+  paths:
+    exclude:
+    - docs/*
+    - README.md
+    - LICENSE
 
 pool:
   vmImage: 'ubuntu-latest'
