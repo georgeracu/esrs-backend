@@ -77,8 +77,8 @@ stages:
           codeCoverageTool: Cobertura
           summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
           reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
-  - stage: Build
-    displayName: Build and push stage
+  - stage: Docker
+    displayName: 'Build Docker image and push to registry'
     jobs:  
     - job: Build
       displayName: Build
