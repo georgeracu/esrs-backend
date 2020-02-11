@@ -1,6 +1,6 @@
 # Python Flask
 
-https://github.com/georgeracu/esrs-backend/workflows/build/badge.svg
+![Test Python app](https://github.com/georgeracu/esrs-backend/workflows/Test%20Python%20app/badge.svg)
 
 ## Table of Contents
 

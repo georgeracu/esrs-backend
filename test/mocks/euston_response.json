@@ -1,0 +1,416 @@
+{
+  "generatedAt": "2020-02-11T13:29:44.0735579+00:00",
+  "nationalRailResponseTimeMilliseconds": 77,
+  "locationName": "London Euston",
+  "filterLocationName": "None",
+  "filtercrs": "None",
+  "filterType": "None",
+  "crs": "EUS",
+  "nrccMessages": "None",
+  "platformAvailable": "True",
+  "areServicesAvailable": "None",
+  "trainServices": [
+    {
+      "serviceID": "12SSPl5krpeoIGlWJOLUgg==",
+      "serviceIDUrlSafe": "12SSPl5krpeoIGlWJOLUgg--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:30",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "Avanti West Coast",
+      "operatorCode": "VT",
+      "isCircularRoute": "None",
+      "length": "None",
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Glasgow Central",
+          "crs": "GLC",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "D6IhgRak3QSqx8cCJZ0LWw==",
+      "serviceIDUrlSafe": "D6IhgRak3QSqx8cCJZ0LWw--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:34",
+      "etd": "On time",
+      "platform": "10",
+      "operator": "West Midlands Trains",
+      "operatorCode": "LM",
+      "isCircularRoute": "None",
+      "length": 4,
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Tring",
+          "crs": "TRI",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "1Ct5YLfQ5uUr1pyfKfbtwg==",
+      "serviceIDUrlSafe": "1Ct5YLfQ5uUr1pyfKfbtwg--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:40",
+      "etd": "On time",
+      "platform": "5",
+      "operator": "Avanti West Coast",
+      "operatorCode": "VT",
+      "isCircularRoute": "None",
+      "length": "None",
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Manchester Piccadilly",
+          "crs": "MAN",
+          "via": "via Wilmslow",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "sMwqyAICGS5csoI7BEdtfw==",
+      "serviceIDUrlSafe": "sMwqyAICGS5csoI7BEdtfw--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:43",
+      "etd": "On time",
+      "platform": "13",
+      "operator": "Avanti West Coast",
+      "operatorCode": "VT",
+      "isCircularRoute": "None",
+      "length": "None",
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Glasgow Central",
+          "crs": "GLC",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "nDaKjqrTzWDvluINWZiMkQ==",
+      "serviceIDUrlSafe": "nDaKjqrTzWDvluINWZiMkQ--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:45",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "London Overground",
+      "operatorCode": "LO",
+      "isCircularRoute": "None",
+      "length": 4,
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Watford Junction",
+          "crs": "WFJ",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "3PmfLD6L4np8qMkl+jtxYw==",
+      "serviceIDUrlSafe": "3PmfLD6L4np8qMkl!jtxYw--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:46",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "West Midlands Trains",
+      "operatorCode": "LM",
+      "isCircularRoute": "None",
+      "length": 4,
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Crewe",
+          "crs": "CRE",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "zyeVm18/y2JgHIeYb65neQ==",
+      "serviceIDUrlSafe": "zyeVm18_y2JgHIeYb65neQ--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:49",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "West Midlands Trains",
+      "operatorCode": "LM",
+      "isCircularRoute": "None",
+      "length": 4,
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "LM310100",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Liverpool Lime Street",
+          "crs": "LIV",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "r2dwY/QoHNpVM1fiaeoQbw==",
+      "serviceIDUrlSafe": "r2dwY_QoHNpVM1fiaeoQbw--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:54",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "West Midlands Trains",
+      "operatorCode": "LM",
+      "isCircularRoute": "None",
+      "length": 4,
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "LM180100",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Milton Keynes Central",
+          "crs": "MKC",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "540u6mI2FPli0GU/TuCJdg==",
+      "serviceIDUrlSafe": "540u6mI2FPli0GU_TuCJdg--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "13:58",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "London Overground",
+      "operatorCode": "LO",
+      "isCircularRoute": "None",
+      "length": 4,
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Watford Junction",
+          "crs": "WFJ",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    },
+    {
+      "serviceID": "p2A7doKKPtn1/PzXins+Yg==",
+      "serviceIDUrlSafe": "p2A7doKKPtn1_PzXins!Yg--",
+      "serviceType": "train",
+      "isCancelled": "None",
+      "filterLocationCancelled": "None",
+      "cancelReason": "None",
+      "delayReason": "None",
+      "adhocAlert": "None",
+      "std": "14:00",
+      "etd": "On time",
+      "platform": "None",
+      "operator": "Avanti West Coast",
+      "operatorCode": "VT",
+      "isCircularRoute": "None",
+      "length": "None",
+      "detachFront": "None",
+      "isReverseFormation": "None",
+      "rsid": "None",
+      "origin": [
+        {
+          "locationName": "London Euston",
+          "crs": "EUS",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Manchester Piccadilly",
+          "crs": "MAN",
+          "via": "None",
+          "futureChangeTo": "None",
+          "assocIsCancelled": "None"
+        }
+      ],
+      "currentOrigins": "None",
+      "currentDestinations": "None"
+    }
+  ],
+  "busServices": "None",
+  "ferryServices": "None"
+}

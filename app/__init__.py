@@ -1,5 +1,6 @@
+import json
+
 from flask import Flask
-from flask import jsonify
 
 app = Flask(__name__)
 
@@ -9,13 +10,15 @@ def hello_world():
     return 'Hello World!'
 
 
-@app.route('/EUS')
+@app.route('/departures/EUS')
 def departures():
-    return jsonify(
-        station='London Euston',
-        std='16:07',
-        etd='16:30'
-    )
+    """Return a JSON object of mock departures from Euston Station
+
+    :return: A valid JSON of departures
+    """
+    with open('./test/mocks/euston_response.json') as json_file:
+        data = json.load(json_file)
+        return data
 
 
 if __name__ == '__main__':
