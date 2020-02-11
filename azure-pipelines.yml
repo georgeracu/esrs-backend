@@ -8,7 +8,7 @@
 #         Job 1
 #             Step 1.1
 
-name: Python Flask app
+name: Build master
 
 trigger:
   branches:
@@ -22,6 +22,20 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'bf604a33-e9e3-4da3-b4ba-c395cc31b213'
+  imageRepository: 'georgeracuesrsbackend'
+  containerRegistry: 'esrsproject.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  tag: '$(Build.BuildId)'
+  
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
 
 stages:
   - stage: Build
@@ -63,4 +77,20 @@ stages:
           codeCoverageTool: Cobertura
           summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
           reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
-        
+  - stage: Build
+    displayName: Build and push stage
+    jobs:  
+    - job: Build
+      displayName: Build
+      pool:
+        vmImage: $(vmImageName)
+      steps:
+      - task: Docker@2
+        displayName: Build and push an image to container registry
+        inputs:
+          command: buildAndPush
+          repository: $(imageRepository)
+          dockerfile: $(dockerfilePath)
+          containerRegistry: $(dockerRegistryServiceConnection)
+          tags: |
+            $(tag)
