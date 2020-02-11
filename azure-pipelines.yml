@@ -11,14 +11,20 @@
 name: Build master
 
 trigger:
+  batch: true
   branches:
     include:
     - 'master'
+    exclude:
+      - '*'
   paths:
     exclude:
     - docs/*
     - README.md
     - LICENSE
+
+pr:
+  none
 
 pool:
   vmImage: 'ubuntu-latest'
