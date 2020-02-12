@@ -34,11 +34,12 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'bf604a33-e9e3-4da3-b4ba-c395cc31b213'
+  dockerRegistryServiceConnection: '0fd848f2-70dd-4f38-a3aa-fd52c45e2423'
   imageRepository: 'georgeracuesrsbackend'
   containerRegistry: 'esrsproject.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
+  imagePullSecret: 'esrsproject212494a2-auth'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -83,16 +84,17 @@ stages:
           codeCoverageTool: Cobertura
           summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
           reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
+
   - stage: Docker
-    displayName: 'Build Docker image and push to registry'
+    displayName: Build stage
     jobs:  
     - job: Build
-      displayName: Build
+      displayName: Build Docker image
       pool:
         vmImage: $(vmImageName)
       steps:
       - task: Docker@2
-        displayName: Build and push an image to container registry
+        displayName: Build and push Docker image to container registry
         inputs:
           command: buildAndPush
           repository: $(imageRepository)
@@ -100,3 +102,39 @@ stages:
           containerRegistry: $(dockerRegistryServiceConnection)
           tags: |
             $(tag)
+            
+      - publish: manifests
+        artifact: manifests
+    
+  - stage: Deploy
+    displayName: Deploy to Kubernetes
+    dependsOn: Build
+  
+    jobs:
+    - deployment: Deploy
+      displayName: Deploy Docker image
+      pool:
+        vmImage: $(vmImageName)
+      environment: 'georgeracuesrsbackend-1323.default'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - task: KubernetesManifest@0
+              displayName: Create imagePullSecret
+              inputs:
+                action: createSecret
+                secretName: $(imagePullSecret)
+                dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+                
+            - task: KubernetesManifest@0
+              displayName: Deploy to Kubernetes cluster
+              inputs:
+                action: deploy
+                manifests: |
+                  $(Pipeline.Workspace)/manifests/deployment.yml
+                  $(Pipeline.Workspace)/manifests/service.yml
+                imagePullSecrets: |
+                  $(imagePullSecret)
+                containers: |
+                  $(containerRegistry)/$(imageRepository):$(tag)
