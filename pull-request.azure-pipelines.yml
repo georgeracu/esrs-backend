@@ -8,12 +8,14 @@
 #         Job 1
 #             Step 1.1
 
-name: Python Flask app Pull Request
+name: 'Pull Request CI'
 
 pr:
   branches:
     include:
     - '*'
+    exclude:
+    - 'master'
   paths:
     exclude:
     - docs/*

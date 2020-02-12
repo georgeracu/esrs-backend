@@ -8,7 +8,7 @@
 #         Job 1
 #             Step 1.1
 
-name: Build master
+name: 'Master CI/CD'
 
 trigger:
   batch: true
@@ -20,9 +20,6 @@ trigger:
     - docs/*
     - README.md
     - LICENSE
-
-pr:
-  none
 
 pool:
   vmImage: 'ubuntu-latest'
