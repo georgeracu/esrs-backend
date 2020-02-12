@@ -11,10 +11,6 @@
 name: 'Master CI/CD'
 
 trigger:
-  batch: true
-  branches:
-    include:
-    - 'master'
   paths:
     exclude:
     - docs/*
@@ -44,6 +40,7 @@ stages:
     displayName: 'Build and test with coverage'
     jobs:
     - job: 'Test'
+      condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'PullRequest'))
       pool:
         vmImage: 'ubuntu-16.04'
       strategy:
@@ -84,6 +81,7 @@ stages:
     displayName: Build stage
     jobs:  
     - job: Build
+      condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
       displayName: Build Docker image
       pool:
         vmImage: $(vmImageName)
@@ -108,6 +106,7 @@ stages:
     jobs:
     - deployment: Deploy
       displayName: Deploy Docker image
+      condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
       pool:
         vmImage: $(vmImageName)
       environment: 'georgeracuesrsbackend-1323.default'
