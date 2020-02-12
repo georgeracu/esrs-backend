@@ -83,6 +83,8 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
 - Run the application with one command: `FLASK_APP=app.py flask run` or to use _gunicorn_ `gunicorn app:app`.
   - `gunicorn` is **MAC only**. For development on Windows, the normal Flask environment is fine.
 - Run linter: `flake8 app`.
+- Start PostgresQL locally: `docker-compose up -d`.
+- Stop PostgresQL locally: `docker-compose down`.
 
 ### Other tools
 
@@ -91,6 +93,8 @@ This has been tested on `python 3.8.0`. If you have problems installing, check y
   - Windows users - this must be executed in a bash environment, either through `git bash` or Windows' Linux subsystem.
 - For code coverage we use [Coverage](https://coverage.readthedocs.io). It works based on `.coveragerc` config file.
 - [Green Unicorn](https://gunicorn.org/#quickstart) as our production web server.
+- [Docker](https://www.docker.com/) for containerization of our application.
+- [Docker compose](https://docs.docker.com/compose/) for spinning up local dependencies.
 
 ### Testing
 
