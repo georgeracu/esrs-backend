@@ -7,7 +7,7 @@ class BasicTests(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get('/', content_type='html/text')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, b'Goodbye World!')
+        self.assertEqual(response.data, b'Goodbye world!')
 
 
 if __name__ == '__main__':
