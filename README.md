@@ -1,7 +1,6 @@
 # Python Flask
 
 ![Test Python app](https://github.com/georgeracu/esrs-backend/workflows/Test%20Python%20app/badge.svg)
-[![Build Status](https://dev.azure.com/azure0047/esrs-backend/_apis/build/status/georgeracu.esrs-backend?branchName=master)](https://dev.azure.com/azure0047/esrs-backend/_build/latest?definitionId=1&branchName=master)
 
 ## Table of Contents
 
